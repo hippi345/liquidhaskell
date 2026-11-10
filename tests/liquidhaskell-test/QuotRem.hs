@@ -64,7 +64,7 @@ modSMT a b = a - b * divSMT a b
 divSMT
   :: a:Int
   -> {b:Int| b != 0}
-  -> {v:Int | v = a / b} / [ divSMTTermination a b ]
+  -> {v:Int | v = lfDiv a b} / [ divSMTTermination a b ]
 @-}
 -- | The defining property of divSMT is
 --
